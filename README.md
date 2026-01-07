@@ -30,6 +30,8 @@ Technical manuals often describe complex procedures involving conditions, loops,
     python -m spacy download en_core_web_sm
     ```
 
+    *Note: To generate PNG images directly, you also need the [Graphviz system software](https://graphviz.org/download/) installed and on your PATH. Without it, the tool will still work but will only output the source `.dot` file.*
+
 ## Usage
 
 Run the compiler by providing an input text file containing the logic steps.
@@ -82,6 +84,9 @@ The compilation pipeline consists of four stages:
 ```
 
 **Visualization**:
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 The tool generates a `.dot` file which can be visualized using Graphviz.
 
 
