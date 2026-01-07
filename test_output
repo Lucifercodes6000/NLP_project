@@ -1,0 +1,17 @@
+// Technical Manual FSM
+digraph {
+	rankdir=LR
+	START [label=Start shape=ellipse style=filled]
+	S1 [label="Open the main intake valve." shape=box style=""]
+	S2 [label="If the pressure gauge reads above 50 psi, close the emergency shutoff." shape=box style=""]
+	S3 [label="Otherwise, increase the flow rate gradually." shape=box style=""]
+	S4 [label="Monitor the system for 10 minutes." shape=box style=""]
+	S5 [label="Record the final reading in the logbook." shape=box style=""]
+	END [label=End shape=doublecircle style=filled]
+	START -> S1 [label=""]
+	S1 -> S2 [label="If the pressure gauge reads above 50 psi"]
+	S2 -> S3 [label=otherwise]
+	S3 -> S4 [label=""]
+	S4 -> S5 [label=""]
+	S5 -> END [label=""]
+}

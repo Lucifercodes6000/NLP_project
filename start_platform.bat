@@ -1,0 +1,9 @@
+@echo off
+echo Starting Backend...
+start cmd /k "python -m uvicorn web_server.main:app --reload --port 8000"
+
+echo Starting Frontend...
+cd web_client
+start cmd /k "npm run dev"
+
+echo Platform is starting...

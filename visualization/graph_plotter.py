@@ -5,7 +5,8 @@ class GraphPlotter:
     """Visualizes the FSM using Graphviz."""
 
     @staticmethod
-    def plot_fsm(fsm: FSM, output_path: str = "fsm_output"):
+    def create_dot(fsm: FSM) -> graphviz.Digraph:
+        """Creates and returns the Graphviz Digraph object."""
         dot = graphviz.Digraph(comment='Technical Manual FSM', format='png')
         dot.attr(rankdir='LR') # Left to Right layout
 
@@ -26,8 +27,13 @@ class GraphPlotter:
         for transition in fsm.transitions:
             label = transition.condition if transition.condition else ""
             dot.edge(transition.source_id, transition.target_id, label=label)
+        
+        return dot
 
-        # Render
+    @staticmethod
+    def plot_fsm(fsm: FSM, output_path: str = "fsm_output"):
+        dot = GraphPlotter.create_dot(fsm)
+
         # Render
         try:
             output_file = dot.render(output_path, view=False)

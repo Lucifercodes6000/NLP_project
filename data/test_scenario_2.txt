@@ -1,0 +1,5 @@
+1. Open the main intake valve.
+2. If the pressure gauge reads above 50 psi, close the emergency shutoff.
+3. Otherwise, increase the flow rate gradually.
+4. Monitor the system for 10 minutes.
+5. Record the final reading in the logbook.

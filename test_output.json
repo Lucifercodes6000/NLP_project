@@ -1,0 +1,85 @@
+{
+  "start_state_id": "START",
+  "states": [
+    {
+      "id": "START",
+      "description": "Start",
+      "is_start": true,
+      "is_terminal": false
+    },
+    {
+      "id": "S1",
+      "description": "Open the main intake valve.",
+      "is_start": false,
+      "is_terminal": false
+    },
+    {
+      "id": "S2",
+      "description": "If the pressure gauge reads above 50 psi, close the emergency shutoff.",
+      "is_start": false,
+      "is_terminal": false
+    },
+    {
+      "id": "S3",
+      "description": "Otherwise, increase the flow rate gradually.",
+      "is_start": false,
+      "is_terminal": false
+    },
+    {
+      "id": "S4",
+      "description": "Monitor the system for 10 minutes.",
+      "is_start": false,
+      "is_terminal": false
+    },
+    {
+      "id": "S5",
+      "description": "Record the final reading in the logbook.",
+      "is_start": false,
+      "is_terminal": false
+    },
+    {
+      "id": "END",
+      "description": "End",
+      "is_start": false,
+      "is_terminal": true
+    }
+  ],
+  "transitions": [
+    {
+      "source_id": "START",
+      "target_id": "S1",
+      "condition": null,
+      "action": null
+    },
+    {
+      "source_id": "S1",
+      "target_id": "S2",
+      "condition": "If the pressure gauge reads above 50 psi",
+      "action": null
+    },
+    {
+      "source_id": "S2",
+      "target_id": "S3",
+      "condition": "otherwise",
+      "action": null
+    },
+    {
+      "source_id": "S3",
+      "target_id": "S4",
+      "condition": null,
+      "action": null
+    },
+    {
+      "source_id": "S4",
+      "target_id": "S5",
+      "condition": null,
+      "action": null
+    },
+    {
+      "source_id": "S5",
+      "target_id": "END",
+      "condition": null,
+      "action": null
+    }
+  ]
+}

@@ -10,3 +10,8 @@ venv/
 fsm_output.dot
 fsm_output.json
 fsm_output.png
+node_modules/
+dist/
+.DS_Store
+web_client/node_modules/
+web_client/dist/
