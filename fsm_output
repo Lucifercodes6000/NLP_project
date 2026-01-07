@@ -1,0 +1,17 @@
+// Technical Manual FSM
+digraph {
+	rankdir=LR
+	START [label=Start shape=ellipse style=filled]
+	S1 [label="Power up the system." shape=box style=""]
+	S2 [label="If the red light blinks, check the battery connection." shape=box style=""]
+	S3 [label="Otherwise, proceed to system initialization." shape=box style=""]
+	S4 [label="Wait for the green signal." shape=box style=""]
+	S5 [label="Press the Start button to begin operation." shape=box style=""]
+	END [label=End shape=doublecircle style=filled]
+	START -> S1 [label=""]
+	S1 -> S2 [label="If the red light blinks"]
+	S2 -> S3 [label=otherwise]
+	S3 -> S4 [label=""]
+	S4 -> S5 [label=""]
+	S5 -> END [label=""]
+}

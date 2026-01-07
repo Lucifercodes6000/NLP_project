@@ -1,0 +1,85 @@
+{
+  "start_state_id": "START",
+  "states": [
+    {
+      "id": "START",
+      "description": "Start",
+      "is_start": true,
+      "is_terminal": false
+    },
+    {
+      "id": "S1",
+      "description": "Power up the system.",
+      "is_start": false,
+      "is_terminal": false
+    },
+    {
+      "id": "S2",
+      "description": "If the red light blinks, check the battery connection.",
+      "is_start": false,
+      "is_terminal": false
+    },
+    {
+      "id": "S3",
+      "description": "Otherwise, proceed to system initialization.",
+      "is_start": false,
+      "is_terminal": false
+    },
+    {
+      "id": "S4",
+      "description": "Wait for the green signal.",
+      "is_start": false,
+      "is_terminal": false
+    },
+    {
+      "id": "S5",
+      "description": "Press the Start button to begin operation.",
+      "is_start": false,
+      "is_terminal": false
+    },
+    {
+      "id": "END",
+      "description": "End",
+      "is_start": false,
+      "is_terminal": true
+    }
+  ],
+  "transitions": [
+    {
+      "source_id": "START",
+      "target_id": "S1",
+      "condition": null,
+      "action": null
+    },
+    {
+      "source_id": "S1",
+      "target_id": "S2",
+      "condition": "If the red light blinks",
+      "action": null
+    },
+    {
+      "source_id": "S2",
+      "target_id": "S3",
+      "condition": "otherwise",
+      "action": null
+    },
+    {
+      "source_id": "S3",
+      "target_id": "S4",
+      "condition": null,
+      "action": null
+    },
+    {
+      "source_id": "S4",
+      "target_id": "S5",
+      "condition": null,
+      "action": null
+    },
+    {
+      "source_id": "S5",
+      "target_id": "END",
+      "condition": null,
+      "action": null
+    }
+  ]
+}
