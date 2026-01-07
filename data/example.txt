@@ -1,0 +1,5 @@
+1. Power up the system.
+2. If the red light blinks, check the battery connection.
+3. Otherwise, proceed to system initialization.
+4. Wait for the green signal.
+5. Press the Start button to begin operation.
