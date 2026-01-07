@@ -84,5 +84,4 @@ The compilation pipeline consists of four stages:
 **Visualization**:
 The tool generates a `.dot` file which can be visualized using Graphviz.
 
----
-**License**: MIT
+
